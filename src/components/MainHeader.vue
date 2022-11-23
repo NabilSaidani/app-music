@@ -5,7 +5,7 @@
     <nav>
       <ul>
         <a href="#">
-            <img src="../assets/image/logodeezer.webp" alt="Le logo de deezer">
+            <img src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
         </a>
         <li>
           <a href="#">Playlist</a>
