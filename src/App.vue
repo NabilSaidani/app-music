@@ -1,10 +1,21 @@
 <script>
-export default {};
+import MainHeader from '@/components/MainHeader.vue';
+import MainFooter from '@/components/MainFooter.vue';
+export default {
+  components: { MainHeader, MainFooter },
+  data() {
+    return {
+    }
+  },
+};
 </script>
 
 <template>
+  <MainHeader/>
   <h1>A vous de coder ! Vinoth t'es un bon on va tué ça</h1>
-  <h3>VN en didi</h3>
+  <MainFooter/>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

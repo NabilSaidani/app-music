@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 0 50px;
+    color: #25271E;
+    /* Couleur de texte principale */
+  }
+  
+  #app {
+    /* Taille maximum et centrage de notre site */
+    margin: auto;
+    max-width: 1024px;
+  }
+  
+  
+  /* STYLE PRINCIPAUX */
+  #main-nav,
+  #search-bar,
+  #main-content,
+  #main-footer {
+    /* Style des 4 blocs principaux */
+    background-color: #D0E799;
+    border-bottom: 1px solid #6D0839;
+    margin-bottom: 20px;
+  }
+  
+  #main-nav {
+    /* Taille & positionnement de la barre de navigation */
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #main-nav,
+  #search-bar,
+  #main-content,
+  #main-footer {
+    /* Style spécifique pour le footer */
+    width: 100%;
+    padding: 10px;
+    color: #6D0839;
+  }
+  /* STYLE DE LA PARTIE CATALOGUE */
+  #catalog {
+    /* Positionnement du contenu de la zone catalogue */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
