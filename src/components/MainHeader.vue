@@ -6,7 +6,7 @@
         <div class="wrapper">
             <div class="nav-bloc n-2">
                 <div class="sub-nav">
-                    <img src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
+                    <img class="logo" src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
                     <ul>
                         <li>
                             <RouterLink v-bind:to="{name:'playlist-view'}">Playlist</RouterLink>
@@ -105,6 +105,10 @@ body {
     text-decoration: none;
 }
 
+.sub-nav .logo {
+  width: 90px;
+  height: 90px;
+}
 
 .main-content {
     padding-left: 75px;
