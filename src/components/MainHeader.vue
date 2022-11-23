@@ -81,34 +81,6 @@ body {
     width: 75px;
 }
 
-.three-dots-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-}
-
-.dot {
-    flex-shrink: 0;
-    margin: 10px 3px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #000;
-}
-
-.d1 {
-    background: crimson;
-}
-
-.d2 {
-    background: yellow;
-}
-
-.d3 {
-    background: lightgreen;
-}
-
 .nav-bloc {
     padding: 20px 0;
     display: flex;
