@@ -13,13 +13,13 @@
                     </path>
                 </svg>
                 <div class="sub-nav">
-                    <h2>Subtitle 2</h2>
+                    <img src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
                     <ul>
                         <li>
-                            <a>Playlist</a>
+                            <RouterLink v-bind:to="{name:'playlist-view'}">Playlist</RouterLink>
                         </li>
                         <li>
-                            <a>Favoris</a>
+                            <RouterLink v-bind:to="{name:'favoris-view'}">Favoris</RouterLink>
                         </li>
                         <li>
                             <RouterLink v-bind:to="{name:'contact-view'}">Contact</RouterLink>
