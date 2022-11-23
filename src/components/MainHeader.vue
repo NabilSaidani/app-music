@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <h1>navibl</h1>
+    <h1>Vinoth</h1>
 </template>
 
 <style scoped></style>
