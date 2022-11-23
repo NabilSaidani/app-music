@@ -5,13 +5,6 @@
     <nav class="side-nav">
         <div class="wrapper">
             <div class="nav-bloc n-2">
-                <svg aria-hidden="true" focusable="true" data-prefix="fas" data-icon="user-alt"
-                    class="svg-inline--fa fa-user-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
-                    <path
-                        d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z">
-                    </path>
-                </svg>
                 <div class="sub-nav">
                     <img src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
                     <ul>
@@ -52,8 +45,6 @@
 </template>
 
 <style scoped>
-*,
-::before,
 ::after {
     box-sizing: border-box;
     margin: 0;
@@ -75,37 +66,6 @@ body {
 }
 
 /* To hide the sub-nav */
-.wrapper {
-    background: #333;
-    height: 100vh;
-    width: 75px;
-}
-
-.nav-bloc {
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    border-bottom: 1px solid #f2f2f21e;
-}
-
-.nav-bloc:hover {
-    background: rgb(24, 24, 24);
-}
-
-.nav-bloc:hover .sub-nav {
-    transform: translateX(75px);
-}
-
-.nav-bloc svg {
-    width: 25px;
-    fill: #f2f2f2;
-    transition: 0.2s ease-in-out;
-}
-
-.nav-bloc:hover svg {
-    fill: #50bddf;
-}
 
 .sub-nav {
     padding: 0px;
@@ -117,11 +77,6 @@ body {
     background: #333;
     z-index: -1;
     color: white;
-    /* Hidden at the left side */
-    transform: translateX(-100%);
-    transition: transform 0.2s ease-in-out;
-    border-right: 2px solid #000;
-    border-left: 2px solid #000;
 }
 
 .sub-nav h2 {
