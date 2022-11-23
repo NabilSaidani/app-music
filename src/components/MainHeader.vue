@@ -16,7 +16,7 @@
         </li>
 
         <li>
-          <a href="#">Contact</a>
+            <RouterLink v-bind:to="{name:'contact-view'}">Contact</RouterLink>
         </li>
       </ul>
     </nav>
