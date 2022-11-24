@@ -63,5 +63,15 @@ textarea {
   resize: none;
 }
 
+h1 {
+  background-color: #333;
+  color: white;
+}
+
+h2 {
+  background-color: #333;
+  color: white;
+}
+
 
 </style>
