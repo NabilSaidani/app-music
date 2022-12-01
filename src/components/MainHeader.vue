@@ -4,54 +4,23 @@
 <template>
   <nav class="side-nav">
     <div class="wrapper">
-      <div class="nav-bloc n-2">
+
         <div class="sub-nav">
-          <img
-            class="logo"
-            src="../assets/images/logodeezer.webp"
-            alt="Le logo de deezer"
-          />
+          <img class="logo" src="../assets/images/logodeezer.webp" alt="Le logo de deezer" />
           <ul>
             <li>
-              <RouterLink v-bind:to="{ name: 'playlist-view' }"
-                >Playlist</RouterLink
-              >
+              <RouterLink v-bind:to="{ name: 'home-view' }">Home</RouterLink>
             </li>
             <li>
-              <RouterLink v-bind:to="{ name: 'favoris-view' }"
-                >Favoris</RouterLink
-              >
+              <RouterLink v-bind:to="{ name: 'playlist-view' }">Playlist</RouterLink>
             </li>
             <li>
-              <RouterLink v-bind:to="{ name: 'contact-view' }"
-                >Contact</RouterLink
-              >
+              <RouterLink v-bind:to="{ name: 'contact-view' }">Contact</RouterLink>
             </li>
           </ul>
         </div>
-      </div>
     </div>
   </nav>
-  <!-- <div class="main-nav">
-    <nav>
-      <ul>
-        <a href="#">
-            <img src="../assets/images/logodeezer.webp" alt="Le logo de deezer">
-        </a>
-        <li>
-          <a href="#">Playlist</a>
-        </li>
-
-        <li>
-          <a href="#">Favoris</a>
-        </li>
-
-        <li>
-            <RouterLink v-bind:to="{name:'contact-view'}">Contact</RouterLink>
-        </li>
-      </ul>
-    </nav>
-  </div> -->
 </template>
 
 <style scoped>
@@ -59,6 +28,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
+  font-weight: normal;
 }
 
 body {
@@ -69,37 +40,33 @@ body {
 
 /* New Stacking Context with Fixed */
 .side-nav {
-  position: fixed;
-  height: 100vh;
+  position:fixed;
   left: 0;
   top: 0;
+  font-family: open sans, sans-serif;
+  justify-content: center;
+  display: block;
+  flex-direction: column;
+  background-color: black;
+  height: 78vh;
+  width: 12%;
+  margin: 15px;
+  padding-top: 10px;
+  
 }
 
 /* To hide the sub-nav */
-
 .sub-nav {
   padding: 0px;
   width: 200px;
-  height: 100vh;
+  height: 75vh;
   position: absolute;
   top: 0;
   left: 0;
   background: #333;
   z-index: -1;
   color: white;
-}
-
-.sub-nav h2 {
-  font-family: open sans, sans-serif;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #222;
-}
-
-.sub-nav ul {
-  list-style-type: none;
+  padding-bottom: 70px;
 }
 
 .sub-nav li {
@@ -116,26 +83,9 @@ body {
 }
 
 .sub-nav .logo {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
+  padding-left: 30%;
 }
 
-.main-content {
-  padding-left: 75px;
-  color: #f3f3f3;
-}
-
-.main-content h1 {
-  font-family: Open Sans, sans-serif;
-  text-align: center;
-  margin: 30px 0;
-  font-size: 40px;
-}
-
-.main-content p {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 30px;
-  line-height: 1.7;
-}
 </style>

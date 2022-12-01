@@ -11,10 +11,9 @@ export default {
 </script>
 
 <template>
-  <MainHeader/>
-  <router-view ></router-view>
-  <h1>A vous de coder !</h1>
-  <MainFooter/>
+  <MainHeader />
+  <router-view></router-view>
+  <MainFooter />
 </template>
 
 <style scoped>

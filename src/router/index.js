@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import PlaylistView from '@/views/PlaylistView.vue';
-import FavorisView from '@/views/FavorisView.vue';
+import HomeView from '@/views/HomeView.vue';
 import ContactView from '@/views/ContactView.vue';
 
 const router = createRouter({
@@ -12,9 +12,9 @@ const router = createRouter({
       name: 'playlist-view', 
     },
     {
-      path: '/favoris',
-      component: FavorisView,
-      name: 'favoris-view', 
+      path: '/home',
+      component: HomeView,
+      name: 'home-view', 
     },
     {
       path: '/contact',
