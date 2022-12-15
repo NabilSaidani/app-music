@@ -1,19 +1,22 @@
 <script>
 export default {
-  name: "ContactView.vue",
   data() {
     return {
-      nom: "",
-      prenom: "",
-      email: "",
-      message: "",
+      post: [],
     };
   },
   methods: {
-    envoyerLeMessage() {
-      console.log("function called");
-    },
+    getPost() {
+      fetch(
+        "https://y9z7x9ray4.execute-api.eu-west-1.amazonaws.com/default/ecvApiExample?domain=Contact"
+      )
+      .then(response => response.json())
+      .then(data => this.post = data)
+    }
   },
+  mounted() {
+    this.getPosts()
+  }
 };
 </script>
 
