@@ -1,4 +1,21 @@
-<script></script>
+<script>
+export default {
+  name: "ContactView.vue",
+  data() {
+    return {
+      nom: "",
+      prenom: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    envoyerLeMessage() {
+      console.log("function called");
+    },
+  },
+};
+</script>
 
 <template>
   <h1>Contact</h1>
@@ -22,7 +39,9 @@
         <textarea name="message" id="user_message"></textarea>
       </p>
       <p class="button">
-        <button type="submit">Envoyer le message</button>
+        <button type="submit" v-on:click="envoyerLeMessage()">
+          Envoyer le message
+        </button>
       </p>
     </form>
   </div>
@@ -72,6 +91,4 @@ h2 {
   background-color: #333;
   color: white;
 }
-
-
 </style>
