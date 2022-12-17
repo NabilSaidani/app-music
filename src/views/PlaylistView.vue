@@ -11,7 +11,7 @@ export default {
   },
   async mounted(){
         //chargement de la list des produits depuis l'API
-        let requestUrl = "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist=1728093421"
+        let requestUrl = "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist=699296985"
         let requestOptions = {
           method: 'GET',
         }
@@ -26,12 +26,10 @@ export default {
 
         console.log(response.status);
         for(let productFromApi of jsonContent['data']){
-          console.log('image',productFromApi.picture)
+          console.log('cover',productFromApi.cover)
           this.productList.push({
             name:productFromApi.title,
-            description : productFromApi.summary,
-            image: productFromApi.picture,
-            isFavorite : false,
+            image: productFromApi.cover,
           })
         }
       }
@@ -41,7 +39,7 @@ export default {
 
 <template>
   <h1>Playlist</h1>
-
+  
 </template>
 
 <style scoped>
