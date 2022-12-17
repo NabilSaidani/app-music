@@ -13,6 +13,7 @@
     /* Taille maximum et centrage de notre site */
     margin: auto;
     max-width: 1024px;
+    padding-left: 20%;
   }
   
   

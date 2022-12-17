@@ -15,7 +15,7 @@ export default {
     }
   },
   mounted() {
-    this.getPosts()
+    this.getPost()
   }
 };
 </script>

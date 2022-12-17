@@ -12,7 +12,6 @@
   display: flex;
   background-color: rgb(0, 0, 0);
   height: 130px;
-  margin: 15px;
 }
 #main-footer h3 {
   color: azure;

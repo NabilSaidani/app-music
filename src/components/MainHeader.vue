@@ -36,6 +36,7 @@ body {
   background: #222;
   font-family: Raleway, Helvetica, sans-serif;
   position: relative;
+  display: flex;
 }
 
 /* New Stacking Context with Fixed */
@@ -45,7 +46,7 @@ body {
   top: 0;
   font-family: open sans, sans-serif;
   justify-content: center;
-  display: block;
+  display: flex;
   flex-direction: column;
   background-color: black;
   height: 78vh;

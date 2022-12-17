@@ -1,41 +1,41 @@
 <script>
+import MusicBlock from '@/components/MusicBlock.vue';
+
 export default {
+  components: { MusicBlock },
   data() {
     return {
-      sonlistMoment: [
-        {
-          name: "Hit 2022",
-          //   description: "Appareil d'écoute radiophonique ou téléphonique.",
-          image: "casque.jpeg",
-        },
-        {
-          name: "Rock 90s",
-          //   description: "C'est une banane jaune qui est importé du brésil.",
-          image: "banane.jpeg",
-        },
-        {
-          name: "Rap Us",
-          //   description: "Pour allumer le feu.",
-          image: "briquet.jpeg",
-        },
-        {
-          name: "Hellfest",
-          //   description: "Pour allumer le feu.",
-          image: "briquet.jpeg",
-        },
-        {
-          name: "Noël",
-          //   description: "Pour allumer le feu.",
-          image: "briquet.jpeg",
-        },
-        {
-          name: "Classique",
-          //   description: "Pour allumer le feu.",
-          image: "briquet.jpeg",
-        },
-      ],
-    };
+      title: "Playlist",
+      productList: [],
+    }
   },
+  async mounted(){
+        //chargement de la list des produits depuis l'API
+        let requestUrl = "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist=1728093421"
+        let requestOptions = {
+          method: 'GET',
+        }
+
+        const response = await fetch(requestUrl, requestOptions);
+        const jsonContent = await response.json();
+
+        let messageErreur = ""; 
+        if(response.status == '400'){
+          this.messageErreur = "Impossible de charger l'url API";           
+        }
+
+        console.log(response.status);
+        for(let productFromApi of jsonContent['data']){
+          console.log('image',productFromApi.picture)
+          this.productList.push({
+            name:productFromApi.title,
+            description : productFromApi.summary,
+            image: productFromApi.picture,
+            isFavorite : false,
+          })
+        }
+      }
+
 };
 </script>
 
@@ -44,4 +44,6 @@ export default {
 
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
