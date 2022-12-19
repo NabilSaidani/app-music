@@ -17,6 +17,9 @@
             <li>
               <RouterLink v-bind:to="{ name: 'contact-view' }">Contact</RouterLink>
             </li>
+            <li>
+              <RouterLink v-bind:to="{ name: 'detailPlaylist-view' }"></RouterLink>
+            </li>
           </ul>
         </div>
     </div>

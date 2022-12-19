@@ -1,44 +1,33 @@
 <script>
-import MusicBlock from "@/components/MusicBlock.vue";
-
 export default {
-  components: { MusicBlock },
-  data() {
-    return {
-      title: "Playlist",
-      productList: [],
-    };
-  },
-  async mounted() {
-    //chargement de la list des produits depuis l'API
-    let requestUrl =
-      "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist";
-    let requestOptions = {
-      method: "GET",
-    };
-
-    const response = await fetch(requestUrl, requestOptions);
-    const jsonContent = await response.json();
-
-    let messageErreur = "";
-    if (response.status == "400") {
-      this.messageErreur = "Impossible de charger l'url API";
-    }
-
-    console.log(response.status);
-    for (let productFromApi of jsonContent["data"]) {
-      console.log("cover", productFromApi.cover);
-      this.productList.push({
-        name: productFromApi.title,
-        image: productFromApi.cover,
-      });
-    }
-  },
-};
+    data() {
+        return {
+            listOfPlaylist: [
+                { name: "Hits 2022", image: "../src/assets/images/Hits2022.jpeg"},
+                { name: "Rock 90s", image: "../src/assets/images/Rock90s.jpeg" },
+                { name: "Rap US", image: "../src/assets/images/RapUS.jpeg" },
+                { name: "Hellfest", image: "../src/assets/images/Hellfest.jpeg" },
+                { name: "Noël", image: "../src/assets/images/Noel.jpeg" },
+                { name: "Classique", image: "../src/assets/images/Classique.jpeg" },
+            ],
+        };
+    },
+}
 </script>
-
 <template>
-  <h1>Playlist</h1>
+    <div class="playlist" v-for="playlist of listOfPlaylist">
+      <div class="playlist__image"><img :src="(playlist.image)" /></div>
+        <h2 class="playlist__name">{{ playlist.name }}</h2>
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#playlist>div.playlist {
+  /* Taille & ombre des tuiles */
+  width: 300px;
+  margin: 10px;
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+}
+</style>
