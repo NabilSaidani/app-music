@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+          title: "Playlist",
             listOfPlaylist: [
                 { name: "Hits 2022", image: "../src/assets/images/Hits2022.jpeg"},
                 { name: "Rock 90s", image: "../src/assets/images/Rock90s.jpeg" },
@@ -23,11 +24,20 @@ export default {
 
 <style scoped>
 #playlist>div.playlist {
-  /* Taille & ombre des tuiles */
-  width: 300px;
+  width: 200px;
   margin: 10px;
   -webkit-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+}
+div.playlist>.playlist__image>img {
+  width: 30%;
+}
+
+div.playlist>.product__actions,
+div.playlist>.playlist_name,
+div.playlist>.product__description,
+div.playlist>.product__actions {
+  padding: 5px 10px 0 10px;
 }
 </style>

@@ -10,7 +10,7 @@ export default {
     };
   },
   async mounted() {
-    //chargement de la list des produits depuis l'API
+    //chargement de la list des playslists depuis l'API
     let requestUrl =
       "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist=699296985";
     let requestOptions = {
@@ -38,7 +38,6 @@ export default {
 </script>
 
 <template>
-  <h1>Playlist</h1>
 </template>
 
 <style scoped></style>
