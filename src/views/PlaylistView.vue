@@ -12,7 +12,7 @@ export default {
   async mounted() {
     //chargement de la list des produits depuis l'API
     let requestUrl =
-      "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist=699296985";
+      "https://sbtem2f2il.execute-api.eu-west-1.amazonaws.com/default/deezerProxyApi?playlist";
     let requestOptions = {
       method: "GET",
     };
